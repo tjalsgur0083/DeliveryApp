@@ -131,7 +131,7 @@ void bottomSheet(
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(title, style: const TextStyle(fontSize: 18)),
+              // Text(title, style: const TextStyle(fontSize: 18)),
               const Text("\$31.00",style: TextStyle(color: Colors.deepOrange),),
             ],
           ),
@@ -139,7 +139,7 @@ void bottomSheet(
           Row(
             children: [
               RatingBar.builder(
-                initialRating: rating,
+                // initialRating: rating,
                 minRating: 1,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
