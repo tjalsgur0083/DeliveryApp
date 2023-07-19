@@ -139,7 +139,7 @@ void bottomSheet(
           Row(
             children: [
               RatingBar.builder(
-                // initialRating: rating,
+                initialRating: rating,
                 minRating: 1,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
