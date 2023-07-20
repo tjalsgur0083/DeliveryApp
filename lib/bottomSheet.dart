@@ -27,7 +27,7 @@ void bottomSheet(
             height: 180,
             child: Stack(
               children: [
-                Align(alignment: Alignment.center, child: Image.asset("asset/food.png", fit: BoxFit.cover)),
+                Align(alignment: Alignment.center, child: Image.asset("assets/food.png", fit: BoxFit.cover)),
                 const Align(alignment: Alignment.bottomRight,
                 child: Icon(Icons.favorite_border),
                 )
