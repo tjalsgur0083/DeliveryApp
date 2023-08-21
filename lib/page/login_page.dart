@@ -58,6 +58,23 @@ class _LoginPageState extends State<LoginPage> {
     ),
     );
 
+    final signupButton = Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                padding: const EdgeInsets.all(15),
+                backgroundColor: Colors.orange,
+                //fixedSize: const Size(50, 50),
+              ),
+            onPressed: () {
+            },
+            child: const Text('SignUp', style: TextStyle(color: Colors.white)),
+            ),
+        );
+
     final forgotLabel = TextButton(
       child: const Text(
         'Forgot password?',
@@ -80,6 +97,8 @@ class _LoginPageState extends State<LoginPage> {
             password,
             const SizedBox(height: 24.0),
             loginButton,
+            const SizedBox(height: 1.0),
+            signupButton,
             forgotLabel
           ],
         ),
