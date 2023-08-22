@@ -1,3 +1,4 @@
+import 'package:deliveryapp/page/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:deliveryapp/page/home_page.dart';
 
@@ -59,21 +60,22 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final signupButton = Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5.0),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(24),
-                ),
-                padding: const EdgeInsets.all(15),
-                backgroundColor: Colors.orange,
-                //fixedSize: const Size(50, 50),
-              ),
-            onPressed: () {
-            },
-            child: const Text('SignUp', style: TextStyle(color: Colors.white)),
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
             ),
-        );
+            padding: const EdgeInsets.all(15),
+            backgroundColor: Colors.orange,
+            //fixedSize: const Size(50, 50),
+          ),
+      onPressed: () {
+        Navigator.of(context).pushNamed(SignupPage.tag);
+        },
+        child: const Text('SignUp', style: TextStyle(color: Colors.white)),
+      ),
+      );
 
     final forgotLabel = TextButton(
       child: const Text(
