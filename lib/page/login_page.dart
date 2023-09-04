@@ -1,6 +1,8 @@
+import 'package:deliveryapp/dio/dio.dart';
 import 'package:deliveryapp/page/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:deliveryapp/page/home_page.dart';
+import 'package:dio/dio.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -11,6 +13,17 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  late Dio dio;
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  @override
+  void initState()
+  {
+    super.initState();
+    dio = Client().init();
+  }
+
   @override
   Widget build(BuildContext context) {
   final logo = Hero(  //swipe 효과
@@ -52,8 +65,26 @@ class _LoginPageState extends State<LoginPage> {
         padding: const EdgeInsets.all(15),
         backgroundColor: Colors.orange,
       ),
-      onPressed: () {
-        Navigator.of(context).pushNamed(HomePage.tag);
+      // onPressed: () {
+      //   Navigator.of(context).pushNamed(HomePage.tag);
+      // },
+      onPressed: () async {
+        try {
+          //login request
+          Response response = await dio.post('/user_table',
+          data:{
+            'EMAIL': emailController.text,
+            'PASSWORD': passwordController.text,
+          });
+
+          if(response.statusCode == 200) {
+            Navigator.of(context).pushNamed(HomePage.tag);
+          } else {
+            debugPrint('retry'); //print
+          }
+        } catch (error) {
+          debugPrint('Error during login: $error'); //print
+        }
       },
       child: const Text('Log In', style: TextStyle(color: Colors.white)),
     ),
