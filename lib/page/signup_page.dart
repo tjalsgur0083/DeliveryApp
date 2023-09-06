@@ -73,7 +73,7 @@ class _SignupPageState extends State<SignupPage> {
         backgroundColor: Colors.orange,
       ),
       onPressed: () {
-        Navigator.of(context).pushNamed(LoginPage.tag);
+        Navigator.of(context).pushNamed(LoginPage.tag);  //add dio
       },
       child: const Text('Log In', style: TextStyle(color: Colors.white)),
     ),

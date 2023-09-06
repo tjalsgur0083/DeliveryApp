@@ -36,6 +36,7 @@ class _LoginPageState extends State<LoginPage> {
   );
 
   final email = TextFormField(
+    controller: emailController,
     keyboardType: TextInputType.emailAddress,
     autofocus: true,
     decoration: InputDecoration(
@@ -46,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
   );
 
   final password = TextFormField(
+    controller: passwordController,
     autofocus: false,
     obscureText: true,
     decoration: InputDecoration(
@@ -70,20 +72,22 @@ class _LoginPageState extends State<LoginPage> {
       // },
       onPressed: () async {
         try {
+          final EMAIL = emailController.text;
+          final PASSWORD = passwordController.text;
           //login request
-          Response response = await dio.post('/user_table',
+          final response = await dio.post('/user_table/user_login',
           data:{
-            'EMAIL': emailController.text,
-            'PASSWORD': passwordController.text,
+            'EMAIL': EMAIL,
+            'PASSWORD': PASSWORD,
           });
 
-          if(response.statusCode == 200) {
+          if(response.statusCode == 200) {    //amend
             Navigator.of(context).pushNamed(HomePage.tag);
           } else {
-            debugPrint('retry'); //print
+            print('retry'); //print
           }
         } catch (error) {
-          debugPrint('Error during login: $error'); //print
+          print('Error during login: $error'); //print
         }
       },
       child: const Text('Log In', style: TextStyle(color: Colors.white)),
