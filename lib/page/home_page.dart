@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:deliveryapp/widget/hearder_widget.dart';
 import 'package:deliveryapp/widget/body_widget.dart';
+import 'package:deliveryapp/widget/bottom_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

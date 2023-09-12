@@ -1,3 +1,4 @@
+import 'package:deliveryapp/widget/bottom_widget.dart';
 import 'package:deliveryapp/widget/popular_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:deliveryapp/widget/search_widget.dart';
@@ -22,6 +23,9 @@ Widget bodyWidget() {
         const SizedBox(height: 10),
         categoryWidget(),
         popularWidget(),
+        //state management test.......
+        const SizedBox(height: 100),
+        bottomWidget()
       ],
     ),
     ),

@@ -17,6 +17,9 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  //add NAME elemente
+  // TextEditingController nameController = TextEditingController();
+
   @override
   void initState()
   {
@@ -67,9 +70,7 @@ class _LoginPageState extends State<LoginPage> {
         padding: const EdgeInsets.all(15),
         backgroundColor: Colors.orange,
       ),
-      // onPressed: () {
-      //   Navigator.of(context).pushNamed(HomePage.tag);
-      // },
+      
       onPressed: () async {
         try {
           final EMAIL = emailController.text;
