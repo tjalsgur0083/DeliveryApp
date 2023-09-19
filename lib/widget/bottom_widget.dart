@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget bottomWidget() {
+Widget bottomWidget(String name) {
   return Container(
     padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-    child: const Column(
+    child: Column(
       children: [
         Text(
-          'state management test line'
+          name
         ),
       ],
     ),

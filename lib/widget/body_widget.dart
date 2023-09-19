@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:deliveryapp/widget/search_widget.dart';
 import 'package:deliveryapp/widget/category_widget.dart';
 
-Widget bodyWidget() {
+Widget bodyWidget(String name) {
   return Positioned(
     left: 0.0,
     right: 0.0,
@@ -25,7 +25,7 @@ Widget bodyWidget() {
         popularWidget(),
         //state management test.......
         const SizedBox(height: 100),
-        bottomWidget()
+        bottomWidget(name) //상태관리 테스트
       ],
     ),
     ),
