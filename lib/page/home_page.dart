@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           hearderWidget(),
-          bodyWidget("xptmxj"),
+          bodyWidget(),
         ],
       ),
     );

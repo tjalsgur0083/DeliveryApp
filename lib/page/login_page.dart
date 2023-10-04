@@ -82,8 +82,7 @@ class _LoginPageState extends State<LoginPage> {
 
             if (response.statusCode == 200) {
               //amend
-              Navigator.of(context).pushNamed(HomePage.tag,
-                  arguments: {'name': response.data.NAME});
+              Navigator.of(context).pushNamed(HomePage.tag);
             } else {
               print('retry'); //print
             }
