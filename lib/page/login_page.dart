@@ -17,9 +17,6 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  //add NAME elemente
-  // TextEditingController nameController = TextEditingController();
-
   @override
   void initState() {
     super.initState();

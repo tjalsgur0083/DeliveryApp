@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:deliveryapp/page/login_page.dart';
 import 'package:deliveryapp/page/home_page.dart';
 import 'package:deliveryapp/page/signup_page.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(GetMaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
