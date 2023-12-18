@@ -6,7 +6,7 @@
 ### 참고자료
 https://github.com/amirk3321/food-delivery
 
-## Page
+## Page 구성
 
 
 
