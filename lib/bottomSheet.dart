@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-//test
 void bottomSheet(
   BuildContext context, {
     String image = '', 
