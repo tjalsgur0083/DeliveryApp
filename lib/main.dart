@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Delivery',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, //이제는 색상만 옅어짐
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),

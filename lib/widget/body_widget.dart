@@ -12,10 +12,10 @@ Widget bodyWidget() {
     child: Container(
       decoration: BoxDecoration(
         color: Colors.grey[200],
-        borderRadius: BorderRadius.only(
-          topLeft: BorderRadius.circular(30),
-          topRight: BorderRadius.circular(30)
-        ),
+        // borderRadius: BorderRadius.only(
+        //   topLeft: BorderRadius.circular(30),
+        //   topRight: BorderRadius.circular(30)
+        // ),
       ),
     child:  Column(
       children: [

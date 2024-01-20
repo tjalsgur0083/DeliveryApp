@@ -17,9 +17,9 @@ void bottomSheet(
     return Container(
       height: 400,
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.only(topLeft: BorderRadius.circular(15), topRight: BorderRadius.circular(15))
+        //borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15))
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,7 +79,7 @@ void bottomSheet(
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
-                borderRadius: BorderRadius.all(BorderRadius.circular(10)),
+                borderRadius: BorderRadius.circular(10),
               ),
             child: const Text('주문', style: TextStyle(fontSize: 18, color: Colors.white),),
             ),
