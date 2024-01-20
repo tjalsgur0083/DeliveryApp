@@ -12,7 +12,7 @@ Widget bottomWidget() {
         Obx(() {
           return Text(
             '${userController.username.value}',
-            style: TextStyle(fontSize: 25),
+            style: const TextStyle(fontSize: 25),
           );
         } 
       ),  

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+
 void bottomSheet(
   BuildContext context, {
     String image = '', 
     String title = '', 
     double rating = 0.0,
     }
-  ) {
+  ) 
+  {
   showModalBottomSheet(
     backgroundColor: Colors.transparent, 
     context: context, 
@@ -65,7 +67,7 @@ void bottomSheet(
             ],
           ),
           Text("About $title",style: const TextStyle(fontSize: 16),),
-          const Text("any comment....",textAlign: TextAlign.start,),
+          //Text("any comment....", textAlign: TextAlign.start),
           const SizedBox(height: 15,),
           InkWell(
             onTap: () {
