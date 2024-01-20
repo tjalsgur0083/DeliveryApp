@@ -23,9 +23,8 @@ Widget bodyWidget() {
         const SizedBox(height: 10),
         categoryWidget(),
         popularWidget(),
-        //state management test.......
         const SizedBox(height: 100),
-        bottomWidget() //상태관리 테스트
+        bottomWidget() //popular Dishes 클릭시 나오는 화면
       ],
     ),
     ),

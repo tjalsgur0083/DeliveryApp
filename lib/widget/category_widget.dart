@@ -18,14 +18,14 @@ Widget categoryWidget() {
                   ),
                 ),
                 const SizedBox(height: 10),
-                MediaQuery.removePadding(
+                MediaQuery.removePadding( //MediaQuery=>앱화면 크기   
                   context: context, 
                   removeTop: true,
                   child:GridView.builder(
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4,
+                      crossAxisCount: 4, //가로에 4개의 요소를 띄움
                     ),
-                    shrinkWrap: true,
+                    shrinkWrap: true, //GridView가 필요한 공간만 차지하도록 설정
                     itemCount: categoryItems.length,
                     itemBuilder: (BuildContext context, int index) {   //(_,index)로 표기해도 됨
                       return Container(

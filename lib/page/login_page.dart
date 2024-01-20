@@ -19,26 +19,24 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
-    super.initState();
+    super.initState(); //부모클래스 값을 사용
     dio = Client().init();
   }
 
   @override
   Widget build(BuildContext context) {
     final logo = Hero(
-      //swipe 효과
       tag: 'puni',
       child: CircleAvatar(
-        backgroundColor: Colors.orangeAccent,
         radius: 48.0,
         child: Image.asset('assets/logo.png'),
       ),
     );
 
-    final email = TextFormField(
-      controller: emailController,
+    final email = TextFormField( //텍스트 입력이 가능한 필드
+      controller: emailController, //db
       keyboardType: TextInputType.emailAddress,
-      autofocus: true,
+      autofocus: true,  //어플 실행시 자동으로 포커스
       decoration: InputDecoration(
         hintText: 'Email',
         contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -47,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final password = TextFormField(
-      controller: passwordController,
+      controller: passwordController, //db
       autofocus: false,
       obscureText: true,
       decoration: InputDecoration(
@@ -59,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
 
     final loginButton = Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
-      child: ElevatedButton(
+      child: ElevatedButton( //좌우로 그림자가 생기는 버튼
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24),
